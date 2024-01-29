@@ -1,0 +1,44 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    display: grid;
+    border: 2px solid black;
+    border-radius: 15px;
+    max-width: 600px; /* Set a maximum width for the container */
+    padding: 20px; /* Add padding to the container */
+    box-sizing: border-box; /* Include padding and border in the total width/height */
+    margin: 10px; /* Add margin to create a gap between containers */
+}
+
+.container > article{
+    border: 2px solid black;
+    border-radius: 15px;
+    padding: 20px; /* Add padding to the article */
+    box-sizing: border-box;
+    margin-top: 10px;
+}
+
+.searchBar{
+    width: 100%; /* Set the width of the search bar relative to the container */
+    padding: 10px; /* Add padding to the search bar for spacing */
+    box-sizing: border-box;
+    border-radius: 15px;
+}
+
+#current-forecast {
+    display: flex; /* Use flexbox to display items vertically */
+    flex-direction: column; /* Stack items vertically */
+    border-radius: 15px;
+    text-align: center;
+}
+
+.cityname, .citytemp, .description, .maxtemp, .mintemp {
+    /* Add styles for the forecast items */
+    margin: 5px; /* Add margin for spacing between items */
+}
