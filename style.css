@@ -8,6 +8,7 @@ body {
 
 .container {
     display: grid;
+    grid-template-columns: 1fr 1fr; /* Two columns for left and right sections */
     border: 2px solid black;
     border-radius: 15px;
     max-width: 600px; /* Set a maximum width for the container */
@@ -16,17 +17,14 @@ body {
     margin: 10px; /* Add margin to create a gap between containers */
 }
 
-.container > article{
-    border: 2px solid black;
-    border-radius: 15px;
-    padding: 20px; /* Add padding to the article */
-    box-sizing: border-box;
-    margin-top: 10px;
+#search {
+    grid-column: span 2; /* Span both columns for the search bar */
+    margin-bottom: 10px; /* Add margin at the bottom of the search bar */
 }
 
-.searchBar{
+.searchBar {
     width: 100%; /* Set the width of the search bar relative to the container */
-    padding: 10px; /* Add padding to the search bar for spacing */
+    padding: 15px; /* Increase padding to increase the height of the search bar */
     box-sizing: border-box;
     border-radius: 15px;
 }
@@ -34,11 +32,33 @@ body {
 #current-forecast {
     display: flex; /* Use flexbox to display items vertically */
     flex-direction: column; /* Stack items vertically */
+    border: 2px solid black;
     border-radius: 15px;
     text-align: center;
+    grid-column: span 2; /* Span both columns for the current forecast */
+    margin-top: 10px; /* Add margin at the top of the current forecast */
+    margin-bottom: 10px; /* Add margin at the bottom of the current forecast */
 }
 
 .cityname, .citytemp, .description, .maxtemp, .mintemp {
     /* Add styles for the forecast items */
     margin: 5px; /* Add margin for spacing between items */
+}
+
+#hourly-forecast {
+    border: 2px solid black;
+    border-radius: 15px;
+    padding: 20px; /* Add padding to the hourly forecast */
+    box-sizing: border-box;
+    margin-bottom: 10px; /* Add margin at the bottom of the hourly forecast */
+    margin-right: 10px;
+}
+
+#Feels-like {
+    border: 2px solid black;
+    border-radius: 15px;
+    padding: 20px; /* Add padding to the feels-like section */
+    box-sizing: border-box;
+    margin-bottom: 10px; /* Add margin at the bottom of the feels-like section */
+    margin-left: 10px;
 }

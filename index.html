@@ -8,13 +8,15 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
   <link href="style.css" rel="stylesheet">
+  <script src="main.js"></script>
 </head>
 
 <body>
   <section class="container">
-    <div id="search-city">
-      <input type="text" class="searchBar" placeholder="Search City">
-    </div>
+    <article id="search-city">
+      <input class="searchBar" list="cities" type="text" name="search" id="search" placeholder="Search City" autocomplete="off"/>
+      <datalist id="cities"></datalist>
+  </article>
     <article id="current-forecast">
       <p class="cityname">1</p>
       <p class="citytemp">2</p>
@@ -23,15 +25,12 @@
       <p class="mintemp"></p>
     </article>
     <article id="hourly-forecast">
-      <h1>Hourly Forecast</h1>
+      <h3>Hourly Forecast</h3>
       <section class="hourly-container">
         <article></article>
       </section>
     </article>
     <article id="Feels-like">
-      <p></p>
-    </article>
-    <article id="Humidity">
       <p></p>
     </article>
   </section>
